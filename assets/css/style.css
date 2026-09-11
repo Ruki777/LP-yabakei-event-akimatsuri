@@ -278,6 +278,41 @@ p {
   white-space: nowrap;
 }
 
+/* ---------------- CONTENTS カード ---------------- */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.content-card {
+  background: var(--bg);
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.content-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.content-card h3 {
+  font-size: 15px;
+  color: var(--primary-dark);
+  margin: 14px 14px 6px;
+}
+
+.content-card p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 14px 16px;
+}
+
 /* ---------------- アクセス ---------------- */
 .access-grid {
   display: grid;
@@ -368,6 +403,22 @@ p {
   display: block;
 }
 
+/* ---------------- 協賛募集の案内 ---------------- */
+.sponsor-note {
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: var(--secondary-tint);
+  color: var(--secondary-dark);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.sponsor-note strong {
+  color: var(--secondary);
+  margin-right: 4px;
+}
+
 /* ---------------- フッター ---------------- */
 .site-footer {
   background: var(--primary-dark);
@@ -394,6 +445,12 @@ p {
 }
 
 /* ---------------- レスポンシブ ---------------- */
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 720px) {
   .access-grid,
   .contact-grid {
@@ -406,5 +463,11 @@ p {
 
   .section {
     padding: 44px 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .content-grid {
+    gap: 14px;
   }
 }

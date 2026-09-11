@@ -18,7 +18,7 @@ GitHub Pages（GitHubが無料で提供する、静的なHTMLサイトをその�
 LP-yabakei-event-akimatsuri/
   index.html            … 本ページ（唯一のページ。開催概要・内容・アクセス・お問い合わせ）
   assets/css/style.css  … サイト全体で使う共通デザイン（色・レイアウト）
-  assets/img/           … 写真（現在は past-festival.jpg のみ。ヒーロー背景兼OG画像）
+  assets/img/           … 写真（past-festival.jpg：ヒーロー背景兼OG画像／CONTENTSカード4枚：past-festival.jpg・kagura.jpg・usobukuro.jpg・mochimaki.webp）
   CNAME                 … 独自ドメイン設定用（中身は akimatsuri.yabakei-event.jp の1行のみ）
   404.html              … 存在しないページにアクセスされたときの案内ページ
   robots.txt / sitemap.xml … 検索エンジン向けの案内ファイル
