@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yabakei-event.jp/sitemap.xml
+Sitemap: https://akimatsuri.yabakei-event.jp/sitemap.xml
