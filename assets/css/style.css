@@ -322,6 +322,12 @@ p { margin: 0 0 1em; }
 
 /* ---------------- セクション共通 ---------------- */
 .section { padding: 34px 16px 38px; background: var(--cream); overflow-x: clip; }
+/* 開催概要：過去開催の写真をうっすら敷く（上に生成りを重ねて文字の読みやすさを保つ） */
+#overview {
+  background:
+    linear-gradient(rgba(255, 244, 198, .78), rgba(255, 244, 198, .78)),
+    url('/assets/img/past-festival.jpg') center / cover no-repeat;
+}
 
 #content {
   background:
