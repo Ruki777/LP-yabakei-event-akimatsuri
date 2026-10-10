@@ -519,6 +519,11 @@ p { margin: 0 0 1em; }
 
 .content-card.c2 h3, .content-card.c4 h3 { transform: rotate(3deg); }
 
+/* ふりがな（リボン札内） */
+.content-card h3 ruby { ruby-position: over; }
+.content-card h3 rt { font-size: 0.5em; color: var(--white); font-weight: 700; text-shadow: none; letter-spacing: 0.05em; }
+.content-card h3:has(ruby) { padding-top: 10px; line-height: 1.2; }
+
 /* ---------------- アクセス ---------------- */
 .access-grid {
   display: grid;
