@@ -27,6 +27,20 @@ LP-yabakei-event-akimatsuri/
 
 ---
 
+## 公開の流れ：ステージング → 確認 → 本番（2026-11-15〜）
+
+いきなり本番に出さない（戸高さん指示）。
+
+1. 手元で `index.html` などを直す
+2. `bash scripts/deploy-staging.sh` を実行する → ステージング（本番の前に確認する試験用の公開場所） https://ruki777.github.io/LP-yabakei-event-akimatsuri-staging/ に出る。1〜2分で反映される。検索エンジンには載らない。画面の左下に「ステージング（確認用）」と表示される
+3. Claude が scripts/check-orphans.js（1〜2文字だけの折り返し・行の右の空き・日本語の間の空白の点検）を走らせ、PC幅とスマホ幅の画面も目で見る。戸高さんがスマホでステージングを見て OK を出す
+4. OK が出たら main を push する → 本番（akimatsuri.yabakei-event.jp）に反映される
+
+ステージング用のリポジトリは `Ruki777/LP-yabakei-event-akimatsuri-staging`（公開）。中身は deploy-staging.sh が毎回上書きするので、直接編集しない。
+サイト内のファイルの参照は相対パス（`assets/...`）で書く。`/assets/...` と書くと、ステージングのアドレス（/LP-yabakei-event-akimatsuri-staging/ の下）で画像や見た目が読み込めなくなる。404.html だけは、どの階層のアドレスからも表示されるので `/assets/...` のままにしている。
+
+---
+
 ## 内容を更新する方法（非エンジニア向け）
 
 このサイトはプログラムではなく「文章が書かれたファイル（HTML）」でできています。難しいコマンドは不要で、**メモ帳のようにテキストを書き換えて保存するだけ**で内容を変更できます。
@@ -34,7 +48,7 @@ LP-yabakei-event-akimatsuri/
 1. `index.html` を開く
 2. 直したい日本語の文章を見つけて書き換える
 3. 保存する
-4. Claude Codeで「この変更をコミット・pushして」と伝える（commit＝変更の記録を残す操作、push＝GitHub上に反映する操作。詳しい手順は毎回Claudeが日本語で説明します）
+4. Claude Codeで「ステージングに出して」と伝え、確認してから「本番に出して」と伝える（commit＝変更の記録を残す操作、push＝GitHub上に反映する操作。詳しい手順は毎回Claudeが日本語で説明します）
 5. pushが終わると、数分でサイトに反映されます
 
 ---
