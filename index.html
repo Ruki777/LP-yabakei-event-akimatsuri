@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Mochiy+Pop+One&family=Kaisei+Tokumin:wght@800&family=Montserrat:wght@800&family=Zen+Maru+Gothic:wght@700;900&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261115d">
+<link rel="stylesheet" href="assets/css/style.css?v=20261115f">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="耶馬溪ジビエフェス2026｜第17回 耶馬溪観光秋まつり">
@@ -67,6 +67,19 @@
   </defs>
 </svg>
 
+<!-- 2026-11-15 各セクションへ飛ぶメニュー（戸高さん依頼）。右上に固定したボタンで開閉する -->
+<button class="menu-btn" id="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="menu-panel"><span></span><span></span><span></span></button>
+<nav class="menu-panel" id="menu-panel" aria-label="ページ内メニュー" hidden>
+  <ul>
+    <li><a href="#overview">開催概要</a></li>
+    <li><a href="#schedule">タイムスケジュール</a></li>
+    <li><a href="#content">内容</a></li>
+    <li><a href="#presale">抽選券の事前予約</a></li>
+    <li><a href="#access">アクセス</a></li>
+    <li><a href="#contact">お問い合わせ・SNS</a></li>
+    <li><a href="#flyer">チラシ</a></li>
+  </ul>
+</nav>
 <section class="hero">
   <svg class="deco balloon b1" viewBox="0 0 40 100" aria-hidden="true" focusable="false" style="color:#D9473A"><use href="#i-balloon"/></svg>
   <svg class="deco balloon b2" viewBox="0 0 40 100" aria-hidden="true" focusable="false" style="color:#E8605A"><use href="#i-balloon"/></svg>
@@ -111,6 +124,7 @@
     </div>
     <div class="badges"><span class="badge-free">入場無料</span><a class="badge-lottery" href="#presale" aria-label="ハズレなし 鷽替抽選券 予約受付中 1枚1,000円"><span class="l1">ハズレなし！</span><span class="l2">鷽替抽選券</span><span class="l3">予約受付中</span><span class="l4">1枚<b>1,000</b>円</span></a></div>
     <div class="hero-presale"><a class="btn-presale-l" href="#presale"><span class="nw">抽選券を</span><span class="nw">事前に予約する ▶</span></a></div>
+    <p class="kouen">後援：中津市／中津耶馬溪観光協会／大分合同新聞</p>
   </div>
 
   <svg class="forest" aria-hidden="true" focusable="false">
@@ -327,6 +341,14 @@
 function u(){f.classList.toggle('hide',vh||vp)}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.target===h)vh=e.isIntersecting;else vp=e.isIntersecting});u()});
 io.observe(h);io.observe(p)})();
+</script>
+<script>
+(function(){var b=document.getElementById('menu-btn'),p=document.getElementById('menu-panel');
+function set(o){b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'メニューを閉じる':'メニューを開く');p.hidden=!o;b.classList.toggle('open',o)}
+b.addEventListener('click',function(){set(p.hidden)});
+p.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+document.addEventListener('click',function(e){if(!p.hidden&&!p.contains(e.target)&&!b.contains(e.target))set(false)})})();
 </script>
 <script>
 /* 2026-11-15 文末の泣き別れ防止（戸高さん指摘「一文字だけで折り返してるの良くない」）。
