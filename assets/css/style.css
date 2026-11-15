@@ -877,3 +877,9 @@ body{padding-bottom:84px}
 .nw{white-space:nowrap}
 /* 2026-11-15 行頭のかっこ（「（」など）の前の半角分の空きを詰める（対応ブラウザのみ）。text-wrap:pretty は行の右に大きな空きを作るので使わない */
 body{text-spacing-trim:trim-start}
+
+/* 2026-11-15 チラシの表面・裏面を並べる（スマホは縦に、広い画面は横に2枚） */
+.flyer-grid{display:grid;gap:24px;max-width:1000px;margin:0 auto}
+@media(min-width:720px){.flyer-grid{grid-template-columns:1fr 1fr}}
+.flyer-grid figure{margin:0}
+.flyer-grid figcaption{margin-top:10px;font-size:14px;font-weight:700;color:var(--brown)}

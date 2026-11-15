@@ -19,6 +19,7 @@ LP-yabakei-event-akimatsuri/
   index.html            … 本ページ（唯一のページ。開催概要・内容・アクセス・お問い合わせ）
   assets/css/style.css  … サイト全体で使う共通デザイン（色・レイアウト）
   assets/img/           … 写真（past-festival.jpg：ヒーロー背景兼OG画像／CONTENTSカード4枚：past-festival.jpg・kagura.jpg・usobukuro.jpg・mochimaki.webp）
+                          チラシ：flyer-front.jpg（表面・表示用1200px）／flyer-front-full.jpg（表面・拡大用）／flyer-back.jpg・flyer-back-full.jpg（裏面＝協賛者様一覧）。表面の元は印刷用PDF flyer_2026.pdf（2026-10-16版）
   CNAME                 … 独自ドメイン設定用（中身は akimatsuri.yabakei-event.jp の1行のみ）
   404.html              … 存在しないページにアクセスされたときの案内ページ
   robots.txt / sitemap.xml … 検索エンジン向けの案内ファイル
