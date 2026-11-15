@@ -871,6 +871,7 @@ body{padding-bottom:84px}
 @media(max-width:767px){.fab{left:0;right:0;bottom:0;padding:14px 12px calc(14px + env(safe-area-inset-bottom));font-size:16px;border-top:3px solid #F6E92E}}
 @media(min-width:768px){.fab{right:24px;bottom:24px;padding:14px 26px;border-radius:999px;border:4px solid #fff;font-size:18px}}
 
-/* 2026-11-15 文末の泣き別れ防止：最後の4文字をまとめる（index.html 末尾のスクリプトが付ける）。対応ブラウザでは行のバランスも整える */
+/* 2026-11-15 文末の泣き別れ防止：最後の3文字をまとめる（index.html 末尾のスクリプトが付ける）。対応ブラウザでは行のバランスも整える */
 .nw{white-space:nowrap}
-body{text-wrap:pretty}
+/* 2026-11-15 行頭のかっこ（「（」など）の前の半角分の空きを詰める（対応ブラウザのみ）。text-wrap:pretty は行の右に大きな空きを作るので使わない */
+body{text-spacing-trim:trim-start}
