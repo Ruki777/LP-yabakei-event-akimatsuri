@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Mochiy+Pop+One&family=Kaisei+Tokumin:wght@800&family=Montserrat:wght@800&family=Zen+Maru+Gothic:wght@700;900&family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/style.css?v=20261115b">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="耶馬溪ジビエフェス2026｜第17回 耶馬溪観光秋まつり">
@@ -217,7 +217,7 @@
       <p class="prize-total">全100本（当日販売分を含む）・すべて一般販売価格1,000円以上の景品です</p>
       <h3>当日の引き換え方法</h3>
       <ol class="steps">
-        <li><span class="sn">1</span><span>ご予約の方は、当日16:00までに会場の引換所でお名前を伝え、お支払いのうえ抽選券をお受け取りください</span></li>
+        <li><span class="sn">1</span><span>ご予約の方は、当日16:00までに会場の引換所でお名前を伝え、お支払いのうえ抽選券をお受け取りください<small class="other-buyer">teketでご購入済みの方は、購入完了メールを引換所でご提示ください（整理番号が抽選番号です）</small></span></li>
         <li><span class="sn">2</span><span>抽選結果は当日17:00（1回目）・18:00（2回目）に番号で発表します</span></li>
         <li><span class="sn">3</span><span>当選番号の方は、会場の引換所で抽選券を提示して景品をお受け取りください</span></li>
         <li><span class="sn">4</span><span>最後まで会場にいられない方は、途中で「耶馬溪の恵み賞」とお取り替えいただけます（お取り替え後、その番号は抽選の対象外になります）</span></li>
@@ -225,7 +225,6 @@
       <h3>ご注意</h3>
       <ul class="notes">
         <li><span class="deadline">16:00を過ぎたご予約は取り消し、当日販売に回します</span>。ご予約分の景品（生鮮食品を含む）をご用意していますので、来られない場合は必ず事前にご連絡ください</li>
-        <li>teketでご購入済みの方は、購入完了メールを引換所でご提示ください（整理番号が抽選番号です）</li>
         <li>予備日（11月29日）に開催する場合も、抽選券はそのまま有効です</li>
         <li>開催中止の場合の払い戻し・ご予約の取り扱いは、本サイトでご案内します</li>
         <li>当日ご来場できない方：11月28日（土）11:00までに、抽選番号とお名前をメール（mail@yabakei-tenryu.com）またはお電話（070-2323-0583）でお知らせいただいた方は、12月6日（日）まで天雲龍で景品をお受け取りいただけます。生鮮食品を含むため、景品の状態は保証いたしかねます。</li>
@@ -239,11 +238,11 @@
       <!-- 2026-11-15 LivePocket の販売を取り下げ（購入までの手順が多く離脱が多いため）。Googleフォームの予約に戻し、teket が再開したらメールアドレスを記入した方に案内する -->
       <div class="buy-pause" role="status">
         <p class="bp-head">現在は予約のみ受け付けています</p>
-        <p>チケット販売サービスが停止しているため、一時的に<b>Googleフォームで予約のみ</b>を受け付けています。お支払いは当日、会場でお願いします。ネットでの事前購入ができるようになった際は、ご予約の方にメールでご案内します。</p>
-        <p style="margin-top:8px">①下のボタンのフォームに、お名前・枚数・メールアドレス・電話番号を入力して送信（1分ほど）<br>②当日<b>16:00までに会場の引換所</b>でお名前を伝え、お支払い（現金）<br>③抽選番号つきの抽選券をお受け取り</p>
+        <p>チケット販売サービスが停止しているため、一時的に<b>Googleフォームで予約のみ</b>を受け付けています。ネットでの事前購入ができるようになった際は、ご予約の方にメールでご案内します。</p>
+        <p style="margin-top:8px">下のボタンのフォームに、お名前・枚数・メールアドレス・電話番号を入力して送信してください</p>
       </div>
       <a class="btn-buy" href="https://docs.google.com/forms/d/e/1FAIpQLSc8lwQLOoc8101WXLY7x5iMJCV8nphyqMubbkmvDXMGAAa8lA/viewform" target="_blank" rel="noopener" style="margin-top:18px">事前予約はこちら</a>
-      <p class="buy-sub">Googleフォームが開きます（ログイン不要）・予約受付：11月25日（水）23:59まで</p>
+      <p class="buy-sub">Googleフォームが開きます（ログイン不要）</p>
       <!-- 2026-11-11〜15 の LivePocket ボタン（取り下げ）：
       <a class="btn-buy" href="https://livepocket.jp/e/98pzi" target="_blank" rel="noopener">事前購入はこちら</a>
       <p class="buy-sub">販売サービス：LivePocket（電子チケット）・購入時にシステム利用料165円/枚がかかります</p>
@@ -324,12 +323,13 @@ io.observe(h);io.observe(p)})();
 <script>
 /* 2026-11-15 文末の泣き別れ防止（戸高さん指摘「一文字だけで折り返してるの良くない」）。
    ルール：文のかたまり（段落・<br>の手前）ごとに、最後の3文字（句読点・閉じかっこは数えない）を改行させない（最後の行は必ず3文字以上）。
-   あわせて、左寄せの文章は両端揃え（均等割り付け）にし、行の右に空きを作らない（同日の指摘「変なスペース」）。
+   両端揃え（均等割り付け）は使わない。字間が大きく広がる行ができ、かえって変な空きに見えるため（同日確認）。
    点検は scripts/check-orphans.js。 */
 (function(){var TAIL=3,MIN=9,boxes=[];
 function blk(el){var d=getComputedStyle(el).display;return d.indexOf('inline')!==0||d==='inline-block'||d==='inline-flex'}
 function glue(t){var s=t.nodeValue,m=s.match(/\s*$/),end=s.length-m[0].length,cut=end,n=0;
  while(cut>0&&n<TAIL){cut--;if(!/[\s。、．，）」』】！？!?)\]・…▶]/.test(s[cut]))n++}
+ while(cut>0&&/[0-9A-Za-z０-９（(「『【〜~:：.,\-]/.test(s[cut-1]))cut--;/* 数字と単位・かっこの中身を分けない */
  if(cut===0&&n<TAIL)return;var w=document.createElement('span');w.className='nw';
  w.textContent=s.slice(cut,end);var rest=document.createTextNode(s.slice(end));t.nodeValue=s.slice(0,cut);
  t.parentNode.insertBefore(w,t.nextSibling);w.parentNode.insertBefore(rest,w.nextSibling)}
@@ -340,8 +340,7 @@ for(var n=tw.nextNode();n;n=tw.nextNode()){
  if(!n.nodeValue.trim())continue;var p=n.parentElement;if(/^(SCRIPT|STYLE)$/.test(p.tagName))continue;
  var b=p;while(b&&!blk(b))b=b.parentElement;if(b!==box){flush();box=b;if(boxes.indexOf(b)<0)boxes.push(b)}
  cur=n;len+=n.nodeValue.replace(/\s/g,'').length}
-flush();list.forEach(function(t){var d=getComputedStyle(t.parentNode).display;if(/flex|grid/.test(d))return;/* 横並びの枠の直下に区切りを入れると別の部品として離れて並ぶため触らない */if(t.nodeValue.replace(/\s/g,'').length>=TAIL)glue(t)});
-boxes.forEach(function(b){var a=getComputedStyle(b).textAlign;if(a==='start'||a==='left')b.style.textAlign='justify'})})();
+flush();list.forEach(function(t){var d=getComputedStyle(t.parentNode).display;if(/flex|grid/.test(d))return;/* 横並びの枠の直下に区切りを入れると別の部品として離れて並ぶため触らない */if(t.nodeValue.replace(/\s/g,'').length>=TAIL)glue(t)});})();
 </script>
 </body>
 </html>

@@ -37,6 +37,7 @@ LP-yabakei-event-akimatsuri/
 4. OK が出たら main を push する → 本番（akimatsuri.yabakei-event.jp）に反映される
 
 ステージング用のリポジトリは `Ruki777/LP-yabakei-event-akimatsuri-staging`（公開）。中身は deploy-staging.sh が毎回上書きするので、直接編集しない。
+style.css を変えたら、index.html の `style.css?v=日付` の数字も変える（スマホが古い見た目の設定を覚えたまま、新しい文章だけ表示するのを防ぐ）。
 サイト内のファイルの参照は相対パス（`assets/...`）で書く。`/assets/...` と書くと、ステージングのアドレス（/LP-yabakei-event-akimatsuri-staging/ の下）で画像や見た目が読み込めなくなる。404.html だけは、どの階層のアドレスからも表示されるので `/assets/...` のままにしている。
 
 ---
